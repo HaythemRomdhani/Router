@@ -3,7 +3,7 @@ import MovieCard from './MovieCard'
 function MovieList({movies}) {
 
     return (
-        <div style={{alignItems:"flex-end",flexWrap:"wrap"}}>
+        <div style={{alignItems:"flex",flexWrap:"wrap"}}>
           
          {movies.map((movie,index) => <MovieCard movie={movie} id={index} /> )}
         </div>

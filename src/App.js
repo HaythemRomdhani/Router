@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
 import {useState} from 'react'
 import './App.css';
 import Search from './components/Search';
 import MovieList from "./components/MovieList";
-import {Data} from "./components/Data";
+import Data from "./components/Data";
 import AddMovie from "./components/AddMovie";
+
 
 function App()  {
   
@@ -18,6 +18,7 @@ const deleteMovie = (id) => SetMovies(movies.filter((el) => el.id !== id));
       
       < div className="container">
         <h1 className="title" > Movie APP</h1>
+       
         <Search setKeyTitle={setKeyTitle} setKeyRate={setKeyRate}/>
          
         <br/>

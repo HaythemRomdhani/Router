@@ -22,9 +22,14 @@ const AddMovie = ({addMovie}) => {
       title:"",
       description:"",
       posterUrl:"",
-      rate:1
+      rate:1,
+      trailer: "",
     })
-  }
+  };
+  const addClose = () => {
+    handleShow();
+    handleSave();
+  };
     return (
       <div>
         <Button variant="primary" onClick={handleShow} style={{marginBottom: 20}}>
@@ -52,13 +57,17 @@ const AddMovie = ({addMovie}) => {
                 <label className="input" style={{marginRight: 10}}>Rate : </label>
                 <input type="text" name="rate" onChange={(e)=>setMovie({...newMovie,rate:parseInt(e.target.value)})}/>
               </div>
+              <div>
+                <label className="input" style={{marginRight: 10}}>Rate : </label>
+                <input type="text" name="trailer" onChange={handleChange}/>
+              </div>
             </div>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleShow}>
               Close
             </Button>
-            <Button variant="primary" onClick={handleSave}>Add Movie</Button>
+            <Button variant="primary" onClick={addClose}>Add Movie</Button>
           </Modal.Footer>
         </Modal>
       </div>
